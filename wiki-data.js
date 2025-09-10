@@ -1,4 +1,5 @@
 const WIKI_PAGES = [
+  // Ne rien mettre dans la cathegorie Continent.
   { title: "Erydor", category: "Continent", desc: "Berceau impérial, cœur magique du monde connu.", url: "lieux/erydor.html" },
   { title: "Ozyrelle", category: "Continent", desc: "Archipel mystique, isolé par des brumes éternelles.", url: "lieux/ozyrelle.html" },
   { title: "Veymora", category: "Continent", desc: "Terres marécageuses, hantées par les anciens pactes.", url: "lieux/veymora.html" },
@@ -6,6 +7,7 @@ const WIKI_PAGES = [
   { title: "Korvalis", category: "Continent", desc: "Montagnes glacées, bastion des clans oubliés.", url: "lieux/korvalis.html" },
   { title: "Sylvarion", category: "Continent", desc: "Forêts vivantes, sanctuaire des esprits sylvestres.", url: "lieux/sylvarion.html" },
   { title: "Dravenor", category: "Continent", desc: "Terres corrompues, dominées par les factions obscures.", url: "lieux/dravenor.html" },
+  // Tout lieux dois etre mis sur la page de son Continent respectif.
   { title: "Ordre du Silence", category: "Factions", desc: "Mages sans nom, l’Ordre du Silence efface sans bruit.", url: "factions/ordre-du-silence.html" },
   { title: "Yuki Akanee", category: "Personnages", desc: "Yuki, en exil, cherche sa sœur après un coup d'État.", url: "personnages/yuki-akanee.html" },
   { title: "Yuna Akanee", category: "Personnages", desc: "Sœur jumelle de Yuki, recherchée activement.", url: "personnages/yuna-akanee.html" },
@@ -17,5 +19,21 @@ const WIKI_PAGES = [
   { title: "Iris Veyra", category: "Personnages", desc: "Compagne de Yuki, mère de Caleb, vit à Brumeval.", url: "personnages/iris-veyra.html" },
   { title: "Caleb Akanee", category: "Personnages", desc: "Fils de Yuki et Iris, né en 861.", url: "personnages/caleb-akanee.html" },
   { title: "Brumeval", category: "Territoires", desc: "Village paisible où Yuki fonde sa famille.", url: "territoires/brumeval.html" },
-  { title: "Forêt des Brises-Claires", category: "Territoires", desc: "Refuge d’Ezekiel, lieu d’entraînement de Yuki.", url: "territoires/brises-claires.html" }
+  { title: "Forêt des Brises-Claires", category: "Territoires", desc: "Refuge d’Ezekiel, lieu d’entraînement de Yuki.", url: "territoires/brises-claires.html" },
+  { title: "James Calhan", category: "Personnages", desc: "Orphelin élevé par des hors-la-loi, survivant du massacre de la Bande de Kane.", url: "personnages/james-calhan.html" },
+  { title: "Arthur Calhan", category: "Personnages", desc: "Frère aîné de James, dernier leader de la Bande de Kane après le carnage.", url: "personnages/arthur-calhan.html" },
+  { title: "Morgan Calhan", category: "Personnages", desc: "Frère de James, tué en duel par John Boyles après des années de traque.", url: "personnages/morgan-calhan.html" },
+  { title: "Elias Kane", category: "Personnages", desc: "Chef charismatique de la Bande de Kane, tué en 821 par les Boyles.", url: "personnages/elias-kane.html" },
+  { title: "Malcolm Tate", category: "Personnages", desc: "Bras droit d’Elias, devenu chef après sa mort, assassiné par John Boyles.", url: "personnages/malcolm-tate.html" },
+  { title: "Patrik Grave", category: "Personnages", desc: "Membre loyal de la Bande de Kane, tué lors de la fusillade finale.", url: "personnages/patrik-grave.html" },
+  { title: "Rowan Byrne", category: "Personnages", desc: "Brigand au grand cœur, mort dans l’affrontement contre les Boyles.", url: "personnages/rowan-byrne.html" },
+  { title: "Hank Mathers", category: "Personnages", desc: "Hors-la-loi de la Bande de Kane, tombé lors du dernier duel.", url: "personnages/hank-mathers.html" },
+  { title: "Silias Ward", category: "Personnages", desc: "Compagnon de James, tué dans la fusillade de 828.", url: "personnages/silias-ward.html" },
+  { title: "Jack Burns", category: "Personnages", desc: "Infiltré sous faux nom, véritablement John Boyles, traître et assassin.", url: "personnages/jack-burns.html" },
+  { title: "John Boyles", category: "Personnages", desc: "Membre des Boyles, infiltré chez les Kane, responsable du massacre.", url: "personnages/john-boyles.html" },
+  { title: "Seamus Boyles", category: "Personnages", desc: "Leader du clan Boyles, tué par John pour prendre sa place.", url: "personnages/seamus-boyles.html" },
+  { title: "Bande de Kane", category: "Factions", desc: "Groupe de hors-la-loi justiciers, volaient les riches pour aider les pauvres.", url: "factions/bande-de-kane.html" },
+  { title: "Clan des Boyles", category: "Factions", desc: "Bande rivale violente, ennemie jurée de la Bande de Kane.", url: "factions/clan-des-boyles.html" },
+  { title: "Zarek", category: "Personnages", desc: "Ancien esclave du royaume de Thariel, échappé avec sa sœur Malika après avoir fait exploser une mine.", url: "personnages/zarek.html" },
+  { title: "Malika", category: "Personnages", desc: "Sœur de Zarek, survivante des mines de Thariel, complice de leur fuite vers Andoria.", url: "personnages/malika.html" },
 ];

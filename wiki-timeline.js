@@ -24,5 +24,12 @@ const timelineData = [
   { date: "15 janvier 861 — Naissance de Caleb Akanee", desc: "" },
   { date: "17 février 861 — Attaque de Brumeval", desc: "" },
   { date: "18 février 861 — Départ de YUKI pour retrouver sa sœur", desc: "" },
-  { date: "3 septembre 861 — Rencontre de YUKI et Rolmir", desc: "" }
+  { date: "3 septembre 861 — Rencontre de YUKI et Rolmir", desc: "" },
+  { date: "1 janvier 803 — Naissance de James Calhan", desc: "" },
+  { date: "Mars 821 — Mort d’Elias Kane lors d’une fusillade contre les Boyles", desc: "" },
+  { date: "13 novembre 825 — Révélation de Jack Burns comme John Boyles, assassinat de Malcolm Tate et Seamus Boyles", desc: "" },
+  { date: "22 février 828 — Duel final entre Morgan Calhan et John Boyles, massacre de la Bande de Kane", desc: "" },
+  { date: "26 novembre 840 — Naissance de Zarek à Valoria", desc: "" },
+  { date: "851 — Mort des parents de Zarek et Malika", desc: "" },
+  { date: "855 — Fuite de Zarek et Malika après l’explosion d’une mine", desc: "" }
 ];

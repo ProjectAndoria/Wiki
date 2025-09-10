@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Page wiki — Modèle" />
+  <title>Entrée Wiki — Modèle</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --ink: #e6d7b8;
+      --ink-muted: #b8ab8a;
+      --panel: #1d1916;
+      --accent: #a38347;
+      --ring: rgba(163,131,71,.35);
+      --shadow: rgba(0,0,0,.45);
+      --font: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex; flex-direction: column; align-items: center;
+      background: radial-gradient(circle at 50% 40%, #1d1916 0%, #14110f 100%);
+      color: var(--ink); font-family: var(--font);
+      padding: 1rem;
+    }
+    main {
+      max-width: 800px;
+      width: 100%;
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 3px 6px var(--shadow);
+    }
+    h1 { margin-top: 0; font-size: 2rem; }
+    .image {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .image img {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .desc {
+      margin: 1.5rem 0;
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding-bottom: .4rem;
+    }
+    ul { margin: .5rem 0 1.5rem 1.2rem; }
+    li { margin: .3rem 0; }
+    a.back {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      background: var(--accent);
+      color: #120f0b;
+      font-weight: 600;
+      padding: .7rem 1.2rem;
+      border-radius: 8px;
+      transition: filter .15s ease;
+    }
+    a.back:hover { filter: brightness(1.1); }
+    footer {
+      margin: 2rem 0 1rem;
+      font-size: .85rem;
+      opacity: .75;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nom de l’entrée</h1>
+
+    <div class="image">
+      <img src="" alt="Image de l’entrée (à compléter)">
+    </div>
+
+    <div class="desc">
+      <p>[Description principale de l’entrée. Ici, vous pouvez écrire l’histoire, le contexte, ou toute information générale.]</p>
+    </div>
+
+    <h2>Détails</h2>
+    <ul>
+      <li><strong>Localisation :</strong> …</li>
+      <li><strong>Population / Membres :</strong> …</li>
+      <li><strong>Particularités :</strong> …</li>
+    </ul>
+
+    <a href="../wiki.html" class="back">← Retour au Grimoire</a>
+  </main>
+
+  <footer>© Project Andoria</footer>
+
+  <script>
+    // Vérif pseudo-login
+    if(localStorage.getItem('rp_authed') !== '1'){
+      location.href = "../index.html";
+    }
+  </script>
+</body>
+</html>
