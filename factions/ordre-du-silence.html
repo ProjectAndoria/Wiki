@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Page wiki — Ordre du Silence" />
+  <title>Ordre du Silence — Wiki RP</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --ink: #e6d7b8;
+      --ink-muted: #b8ab8a;
+      --panel: #1d1916;
+      --accent: #a38347;
+      --danger: #b35a3e;
+      --shadow: rgba(0,0,0,.45);
+      --font: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex; flex-direction: column; align-items: center;
+      background: radial-gradient(circle at 50% 40%, #1d1916 0%, #14110f 100%);
+      color: var(--ink); font-family: var(--font);
+      padding: 1rem;
+    }
+    main {
+      max-width: 800px;
+      width: 100%;
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 3px 6px var(--shadow);
+    }
+    h1 { margin-top: 0; font-size: 2rem; }
+    .image {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .image img {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .desc {
+      margin: 1.5rem 0;
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding-bottom: .4rem;
+    }
+    ul { margin: .5rem 0 1.5rem 1.2rem; }
+    li { margin: .3rem 0; }
+    a.back {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      background: var(--accent);
+      color: #120f0b;
+      font-weight: 600;
+      padding: .7rem 1.2rem;
+      border-radius: 8px;
+      transition: filter .15s ease;
+    }
+    a.back:hover { filter: brightness(1.1); }
+    footer {
+      margin: 2rem 0 1rem;
+      font-size: .85rem;
+      opacity: .75;
+      text-align: center;
+    }
+    input[type="password"] {
+      width: 100%;
+      padding: .8rem .9rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: #1a1714;
+      color: var(--ink);
+      outline: none;
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: .7rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: #120f0b;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .error {
+      color: var(--danger);
+      margin-top: .5rem;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <main id="locked">
+    <h1>⚠️ Accès restreint</h1>
+    <p>Ce document est classé <strong>confidentiel</strong> par le Conseil d’Andoria.</p>
+    <p>Veuillez entrer le mot de passe pour accéder à l’entrée :</p>
+    <form id="accessForm">
+      <input type="password" id="access" placeholder="Mot de passe..." />
+      <button type="submit">Déverrouiller</button>
+      <div id="accessErr" class="error" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <main id="content" style="display:none;">
+    <h1>Ordre du Silence</h1>
+
+    <div class="image">
+      <img src="../photos/ordre-du-silence-photo.png" alt="Emblème ou artefact lié à l’Ordre du Silence">
+    </div>
+
+    <div class="desc">
+      <p><em>“Ceux qui les ont affrontés… on ne se souvient même plus de leurs noms.”</em></p>
+      <p><strong>L’Ordre du Silence</strong> est une faction mythique, évoquée par les anciens comme une légende — ou un avertissement.  
+      Nés dans les cryptes oubliées de <strong>Nihilys</strong>, ces mages ont bâti leur pouvoir sur l’absence : <em>absence de nom, de voix, de trace</em>.</p>
+      <p>Leur magie ne crée pas. <strong>Elle efface.</strong>  
+      On dit qu’ils ont jadis conseillé les rois d’Andoria, avant d’être bannis pour avoir tenté d’effacer la mémoire du trône lui-même.</p>
+      <p>Depuis, ils agissent dans l’ombre : infiltrant les cours, manipulant les archives, et faisant disparaître ceux qui en savent trop.  
+      Leur sanctuaire — <strong>la Crique du Néant</strong> — est protégé par des sortilèges si puissants que même les souvenirs de son existence s’effacent.</p>
+      <p><strong>L’Ordre ne conquiert pas.</strong> Il dissout.  
+      Et ceux qui les ont affrontés… <em>on ne se souvient même plus de leurs noms.</em></p>
+    </div>
+
+    <h2>Détails</h2>
+    <ul>
+      <li><strong>Localisation :</strong> La Crique du Néant (territoire masqué, non rattaché à un royaume)</li>
+      <li><strong>Population / Membres :</strong> Inconnue. Chaque membre abandonne son nom et son identité.</li>
+      <li><strong>Particularités :</strong> Magie du vide, effacement de mémoire, infiltration silencieuse, absence totale de hiérarchie visible</li>
+    </ul>
+
+    <a href="../wiki.html" class="back">← Retour au Grimoire</a>
+  </main>
+
+  <footer>© Project Andoria</footer>
+
+  <script>
+    if(localStorage.getItem('rp_authed') !== '1'){
+      location.href = "../index.html";
+    }
+
+    const form = document.getElementById("accessForm");
+    const input = document.getElementById("access");
+    const err = document.getElementById("accessErr");
+    const locked = document.getElementById("locked");
+    const content = document.getElementById("content");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (input.value.trim() === "silencio") {
+        locked.style.display = "none";
+        content.style.display = "block";
+      } else {
+        err.textContent = "Mot de passe incorrect.";
+      }
+    });
+  </script>
+</body>
+</html>

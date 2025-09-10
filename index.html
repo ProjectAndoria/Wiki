@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Accès privé au Wiki RP" />
+  <title>Accès — Wiki RP</title>
+  <style>
+    :root {
+      --bg: #181613;
+      --ink: #e6d7b8;
+      --panel: #24201b;
+      --accent: #a38347;
+      --danger: #b35a3e;
+      --shadow: rgba(0,0,0,.45);
+      --font: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex; justify-content: center; align-items: center;
+      background: radial-gradient(circle at 50% 40%, #24201b 0%, #181613 70%);
+      color: var(--ink); font-family: var(--font);
+    }
+    .card {
+      width: min(90vw, 400px);
+      padding: 2rem;
+      border-radius: 14px;
+      background: var(--panel);
+      box-shadow: 0 10px 25px var(--shadow);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    h1 { margin: 0; font-size: 1.6rem; letter-spacing: .5px; }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    label { font-weight: 600; align-self: flex-start; }
+    input[type="password"] {
+      width: 100%;
+      padding: .8rem .9rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: #1a1714;
+      color: var(--ink);
+      outline: none;
+    }
+    input[type="password"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(163,131,71,.35);
+    }
+    button {
+      width: 100%;
+      padding: .9rem 1rem;
+      border-radius: 10px;
+      border: none;
+      background: var(--accent);
+      color: #120f0b;
+      font-weight: 700;
+      cursor: pointer;
+      transition: filter .15s ease, transform .05s ease;
+    }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px); }
+    .error { color: var(--danger); min-height: 1.2em; }
+    footer { margin-top: 1rem; font-size: .85rem; opacity: .75; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Portail du Grimoire</h1>
+    <form id="loginForm" autocomplete="off">
+      <label for="pw">Mot de passe</label>
+      <input id="pw" name="pw" type="password" placeholder="••••••••" />
+      <button type="submit">Entrer</button>
+      <div id="err" class="error" aria-live="polite"></div>
+    </form>
+    <footer>© Project Andoria</footer>
+  </main>
+
+  <script>
+    const _0x37a006=_0xda1e;function _0x3886(){const _0x3430b2=['encode','3frtsLz','e00403f85f14f82a55c5bf3ca671754cc4930df0c6423242c3d279a525100eed','Mot\x20de\x20passe\x20incorrect.','SHA-256','6EDeSVK','preventDefault','submit','setItem','href','rp_authed','1254730KeYyYv','65GKxkkj','textContent','4860933mkPuxo','loginForm','join','6392952SkyALy','486297QZDjAB','253284ffusDs','306946QdbaXF','padStart','getItem','map','addEventListener','getElementById','err','1402992duBiem','digest','18wStSiz'];_0x3886=function(){return _0x3430b2;};return _0x3886();}(function(_0x2db47f,_0x5d4922){const _0x4d54a9=_0xda1e,_0x1f796c=_0x2db47f();while(!![]){try{const _0x3b3f71=-parseInt(_0x4d54a9(0xab))/0x1*(parseInt(_0x4d54a9(0xa0))/0x2)+-parseInt(_0x4d54a9(0xa7))/0x3+parseInt(_0x4d54a9(0x9f))/0x4*(parseInt(_0x4d54a9(0x98))/0x5)+-parseInt(_0x4d54a9(0xaf))/0x6*(parseInt(_0x4d54a9(0x9e))/0x7)+parseInt(_0x4d54a9(0x9d))/0x8+-parseInt(_0x4d54a9(0xa9))/0x9*(-parseInt(_0x4d54a9(0x97))/0xa)+-parseInt(_0x4d54a9(0x9a))/0xb;if(_0x3b3f71===_0x5d4922)break;else _0x1f796c['push'](_0x1f796c['shift']());}catch(_0xcc1c63){_0x1f796c['push'](_0x1f796c['shift']());}}}(_0x3886,0x69e75));const PASSWORD_HASH=_0x37a006(0xac),DEST='wiki.html';async function hash(_0x4c0919){const _0x11b166=_0x37a006,_0xbd8d13=new TextEncoder()[_0x11b166(0xaa)](_0x4c0919),_0x79b14d=await crypto['subtle'][_0x11b166(0xa8)](_0x11b166(0xae),_0xbd8d13);return Array['from'](new Uint8Array(_0x79b14d))[_0x11b166(0xa3)](_0x23d27b=>_0x23d27b['toString'](0x10)[_0x11b166(0xa1)](0x2,'0'))[_0x11b166(0x9c)]('');}const form=document[_0x37a006(0xa5)](_0x37a006(0x9b)),err=document[_0x37a006(0xa5)](_0x37a006(0xa6));function _0xda1e(_0x1c3e86,_0x4fc494){const _0x3886b6=_0x3886();return _0xda1e=function(_0xda1ea7,_0xe2442d){_0xda1ea7=_0xda1ea7-0x96;let _0x41d929=_0x3886b6[_0xda1ea7];return _0x41d929;},_0xda1e(_0x1c3e86,_0x4fc494);}form[_0x37a006(0xa4)](_0x37a006(0xb1),async _0xc1a257=>{const _0x4c99f7=_0x37a006;_0xc1a257[_0x4c99f7(0xb0)]();const _0x524847=new FormData(form)['get']('pw')??'',_0x521396=await hash(_0x524847);let _0x24c74a=parseInt(localStorage[_0x4c99f7(0xa2)]('rp_attempts')||'0');if(_0x24c74a>=0x5){err[_0x4c99f7(0x99)]='Trop\x20de\x20tentatives.\x20Accès\x20bloqué.';return;}_0x521396===PASSWORD_HASH?(localStorage[_0x4c99f7(0xb2)](_0x4c99f7(0x96),'1'),localStorage[_0x4c99f7(0xb2)]('rp_attempts','0'),location[_0x4c99f7(0xb3)]=DEST):(localStorage[_0x4c99f7(0xb2)]('rp_attempts',_0x24c74a+0x1),err[_0x4c99f7(0x99)]=_0x4c99f7(0xad));});
+  </script>
+</body>
+</html>

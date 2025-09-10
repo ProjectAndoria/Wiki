@@ -1,0 +1,21 @@
+const WIKI_PAGES = [
+  { title: "Erydor", category: "Continent", desc: "Berceau impérial, cœur magique du monde connu.", url: "lieux/erydor.html" },
+  { title: "Ozyrelle", category: "Continent", desc: "Archipel mystique, isolé par des brumes éternelles.", url: "lieux/ozyrelle.html" },
+  { title: "Veymora", category: "Continent", desc: "Terres marécageuses, hantées par les anciens pactes.", url: "lieux/veymora.html" },
+  { title: "Tharvos", category: "Continent", desc: "Désert rouge, royaume des nomades et des reliques.", url: "lieux/tharvos.html" },
+  { title: "Korvalis", category: "Continent", desc: "Montagnes glacées, bastion des clans oubliés.", url: "lieux/korvalis.html" },
+  { title: "Sylvarion", category: "Continent", desc: "Forêts vivantes, sanctuaire des esprits sylvestres.", url: "lieux/sylvarion.html" },
+  { title: "Dravenor", category: "Continent", desc: "Terres corrompues, dominées par les factions obscures.", url: "lieux/dravenor.html" },
+  { title: "Ordre du Silence", category: "Factions", desc: "Mages sans nom, l’Ordre du Silence efface sans bruit.", url: "factions/ordre-du-silence.html" },
+  { title: "Yuki Akanee", category: "Personnages", desc: "Yuki, en exil, cherche sa sœur après un coup d'État.", url: "personnages/yuki-akanee.html" },
+  { title: "Yuna Akanee", category: "Personnages", desc: "Sœur jumelle de Yuki, recherchée activement.", url: "personnages/yuna-akanee.html" },
+  { title: "Yuta Akanee", category: "Personnages", desc: "Frère aîné, manipulé par Kuroda, devenu assassin.", url: "personnages/yuta-akanee.html" },
+  { title: "Aya Akanee", category: "Personnages", desc: "Mère de Yuki, tuée en tentant de fuir Lumora.", url: "personnages/aya-akanee.html" },
+  { title: "Kuroda Nahoru", category: "Personnages", desc: "Dirigeant corrompu de Lumora, instigateur du coup d’État.", url: "personnages/kuroda-nahoru.html" },
+  { title: "Takeshi Nahoru", category: "Personnages", desc: "Ancien dirigeant de Lumora, mort en 854.", url: "personnages/takeshi-nahoru.html" },
+  { title: "Ezekiel Noctharis", category: "Personnages", desc: "Forgeron mystique, mentor de Yuki dans la forêt.", url: "personnages/ezekiel-noctharis.html" },
+  { title: "Iris Veyra", category: "Personnages", desc: "Compagne de Yuki, mère de Caleb, vit à Brumeval.", url: "personnages/iris-veyra.html" },
+  { title: "Caleb Akanee", category: "Personnages", desc: "Fils de Yuki et Iris, né en 861.", url: "personnages/caleb-akanee.html" },
+  { title: "Brumeval", category: "Territoires", desc: "Village paisible où Yuki fonde sa famille.", url: "territoires/brumeval.html" },
+  { title: "Forêt des Brises-Claires", category: "Territoires", desc: "Refuge d’Ezekiel, lieu d’entraînement de Yuki.", url: "territoires/brises-claires.html" }
+];

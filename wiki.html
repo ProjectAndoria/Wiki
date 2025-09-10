@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wiki RP — Hub principal" />
+  <title>Wiki RP — Grimoire</title>
+  
+  <link rel="stylesheet" href="wiki.css">
+</head>
+<body>
+  <header>
+    <h1>Grimoire d’Andoria</h1>
+    <p>Hub principal du monde RP</p>
+  </header>
+
+  <!-- Filtres -->
+  <div class="filters">
+    <button data-filter="All" class="active" aria-pressed="true">Tous</button>
+    <button data-filter="Personnages" aria-pressed="false">Personnages</button>
+    <button data-filter="Lieux" aria-pressed="false">Lieux</button>
+    <button data-filter="Factions" aria-pressed="false">Factions</button>
+    <button id="toggleChrono" aria-pressed="false">Chronologie</button>
+  </div>
+
+  <!-- Recherche avec autocomplétion -->
+  <div class="search">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Rechercher..."
+      role="combobox"
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-owns="searchSuggestions"
+      aria-controls="searchSuggestions"
+      aria-haspopup="listbox"
+    />
+    <ul id="searchSuggestions" class="suggestions" role="listbox" aria-label="Suggestions de recherche"></ul>
+  </div>
+
+  <!-- Résultats -->
+  <section class="results" id="results" role="list" aria-live="polite"></section>
+
+  <!-- Chronologie -->
+  <section class="timeline" id="timeline" aria-label="Chronologie"></section>
+
+  <footer>© Projet Andoria</footer>
+
+  <!-- Scripts -->
+  <script src="wiki-data.js"></script>
+  <script src="wiki-timeline.js"></script>
+  <script src="wiki.js" defer></script>
+  <script src="wiki-search.js" defer></script>
+  <script src="wiki-filters.js" defer></script>
+</body>
+</html>

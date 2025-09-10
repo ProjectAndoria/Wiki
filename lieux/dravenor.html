@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wiki RP — Continent de NOM" />
+  <title>Wiki RP — NOM</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --ink: #e6d7b8;
+      --ink-muted: #b8ab8a;
+      --panel: #1d1916;
+      --accent: #a38347;
+      --ring: rgba(163,131,71,.35);
+      --shadow: rgba(0,0,0,.45);
+      --font: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: radial-gradient(circle at 50% 40%, #1d1916 0%, #14110f 100%);
+      color: var(--ink); font-family: var(--font);
+      padding: 1rem;
+    }
+    header { text-align: center; margin: 2rem 0 1rem; }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { margin: .5rem 0 0; color: var(--ink-muted); }
+
+    nav a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      color: var(--ink-muted);
+      font-size: .9rem;
+    }
+
+    .results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 0 0 220px;
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 1rem;
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 3px 6px var(--shadow);
+      transition: transform .1s ease;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .card:hover { transform: translateY(-2px); }
+    .card h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--ink-muted); font-size: .95rem; }
+
+    footer {
+      margin: 2rem 0 1rem;
+      font-size: .85rem;
+      opacity: .75;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav><a href="../wiki.html">← Retour au Grimoire</a></nav>
+
+  <header>
+    <h1>Continent : NOM</h1>
+    <p>DESCRIPTION DU CONTINENT</p>
+  </header>
+
+  <section class="results" id="countries"></section>
+
+  <footer>© Projet Andoria</footer>
+
+  <script>
+    const continentName = "NOM";
+
+    const WIKI_PAGES = [
+      { title: "Andoria", category: "Pays", continent: "Erydor", desc: "Centre impérial d’Erydor, impose par magie.", url: "../pays/andoria.html" },
+      { title: "Lumora", category: "Pays", continent: "Ozyrelle", desc: "Île fermée, théâtre du coup d’État de 854.", url: "../pays/lumora.html" }
+      // Ajoute ici les pays liés à ce continent
+    ];
+
+    const container = document.getElementById('countries');
+    const countries = WIKI_PAGES.filter(p => p.category === "Pays" && p.continent === continentName);
+
+    countries.forEach(c => {
+      const link = document.createElement('a');
+      link.href = c.url;
+      link.className = "card";
+      link.innerHTML = `<h3>${c.title}</h3><p>${c.desc}</p>`;
+      container.appendChild(link);
+    });
+  </script>
+</body>
+</html>
