@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Wiki RP — Continent de NOM" />
-  <title>Wiki RP — NOM</title>
+  <meta name="description" content="Wiki RP — [Nom du territoire]" />
+  <title>Wiki RP — [Nom du territoire]</title>
   <style>
     :root {
       --bg: #14110f;
@@ -18,7 +18,7 @@
     }
     html, body { height: 100%; margin: 0; }
     body {
-      background: radial-gradient(circle at 50% 40%, #1d1916 0%, #14110f 100%);
+      background: radial-gradient(circle at 50% 40%, var(--panel) 0%, var(--bg) 100%);
       color: var(--ink); font-family: var(--font);
       padding: 1rem;
     }
@@ -71,31 +71,42 @@
   <nav><a href="../wiki.html">← Retour au Grimoire</a></nav>
 
   <header>
-    <h1>Continent : NOM</h1>
-    <p>DESCRIPTION DU CONTINENT</p>
+    <h1>[Nom du territoire]</h1>
+    <p>[Description courte ou slogan mystique]</p>
   </header>
 
-  <section class="results" id="countries"></section>
+  <section class="results" id="entries"></section>
 
   <footer>© Projet Andoria</footer>
 
   <script>
-    const continentName = "NOM";
+    const currentContext = "[Nom du territoire]";
 
     const WIKI_PAGES = [
-      { title: "Andoria", category: "Pays", continent: "Erydor", desc: "Centre impérial d’Erydor, impose par magie.", url: "../pays/andoria.html" },
-      { title: "Lumora", category: "Pays", continent: "Ozyrelle", desc: "Île fermée, théâtre du coup d’État de 854.", url: "../pays/lumora.html" }
-      // Ajoute ici les pays liés à ce continent
+      {
+        title: "Exemple 1",
+        category: "Pays",
+        continent: currentContext,
+        desc: "Description immersive de l'exemple 1.",
+        url: "../pays/exemple-1.html"
+      },
+      {
+        title: "Exemple 2",
+        category: "Pays",
+        continent: currentContext,
+        desc: "Description immersive de l'exemple 2.",
+        url: "../pays/exemple-2.html"
+      }
     ];
 
-    const container = document.getElementById('countries');
-    const countries = WIKI_PAGES.filter(p => p.category === "Pays" && p.continent === continentName);
+    const container = document.getElementById('entries');
+    const entries = WIKI_PAGES.filter(p => p.continent === currentContext);
 
-    countries.forEach(c => {
+    entries.forEach(entry => {
       const link = document.createElement('a');
-      link.href = c.url;
+      link.href = entry.url;
       link.className = "card";
-      link.innerHTML = `<h3>${c.title}</h3><p>${c.desc}</p>`;
+      link.innerHTML = `<h3>${entry.title}</h3><p>${entry.desc}</p>`;
       container.appendChild(link);
     });
   </script>

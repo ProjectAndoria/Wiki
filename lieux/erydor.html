@@ -70,26 +70,48 @@
 <body>
   <nav><a href="../wiki.html">← Retour au Grimoire</a></nav>
 
-  <header>
-    <h1>Continent : Erydor</h1>
-    <p>Berceau impérial, cœur magique du monde connu.</p>
-  </header>
+<header>
+  <h1>Continent : Erydor</h1>
+  <p>
+    Erydor est l’un des sept continents majeurs du monde connu.<br>
+    Il abrite une grande diversité de peuples, aux niveaux de développement très contrastés.<br>
+    Sa renommée repose sur la puissance économique de ses grandes nations exportatrices, comme Andoria, qui dominent les échanges internationaux.<br>
+    Densément peuplé, le continent est marqué par de fortes disparités sociales, visibles autant entre ses royaumes qu’au sein de ses cités.<br>
+    Ce mélange d’identités, de tensions et d’inégalités fait d’Erydor un territoire vibrant, instable, et souvent au cœur des intrigues géopolitiques.
+  </p>
+</header>
 
   <section class="results" id="countries"></section>
 
   <footer>© Projet Andoria</footer>
 
   <script>
-    const continentName = "Erydor";
-
     const WIKI_PAGES = [
-      { title: "Andoria", category: "Pays", continent: "Erydor", desc: "Centre impérial d’Erydor, impose par magie.", url: "../pays/andoria.html" },
-      { title: "Lumora", category: "Pays", continent: "Ozyrelle", desc: "Île fermée, théâtre du coup d’État de 854.", url: "../pays/lumora.html" }
-      // Ajoute ici tous les autres pays avec leur continent
+      {
+        title: "Andoria",
+        category: "Pays",
+        continent: "Erydor",
+        desc: "Centre impérial d’Erydor, impose par magie.",
+        url: "../pays/andoria.html"
+      },
+      {
+        title: "Lumora",
+        category: "Pays",
+        continent: "Ozyrelle",
+        desc: "Île fermée, théâtre du coup d’État de 854.",
+        url: "../pays/lumora.html"
+      },
+      {
+        title: "Royaume de Thariel",
+        category: "Pays",
+        continent: "test",
+        desc: "Territoire esclavagiste impitoyable, connu pour ses mines d’or où les esclaves sont tués à la moindre faiblesse.",
+        url: "../pays/royaume-de-thariel.html"
+      }
     ];
 
     const container = document.getElementById('countries');
-    const countries = WIKI_PAGES.filter(p => p.category === "Pays" && p.continent === continentName);
+    const countries = WIKI_PAGES.filter(p => p.category === "Pays");
 
     countries.forEach(c => {
       const link = document.createElement('a');
@@ -101,3 +123,4 @@
   </script>
 </body>
 </html>
+
